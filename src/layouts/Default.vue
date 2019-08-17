@@ -1,21 +1,39 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">Gridsome</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+  <div class="blog home">
+    <div class="backgroundContain">
+      <background-svg />
+    </div>
+    <div class="container">
+      <div class="name">
+        <a href="mailto:tcober5@gmail.com">
+          <g-image src="@/assets/mail.svg" width="40" />
+        </a>
+        <h1>THOMAS&nbsp;COBER</h1>
+      </div>
+      <slot />
+      <div class="menu">
+        <g-link to="/work" class="design button text">WORK</g-link>
+
+        <div class="music button text">MUSIC</div>
+
+        <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
+      </div>
+    </div>
   </div>
 </template>
 
+<script>
+import BackgroundSvg from "@/components/BackgroundSvg.vue";
+export default {
+  name: "Layout",
+  components: { BackgroundSvg }
+};
+</script>
+
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 img {
@@ -27,7 +45,7 @@ nav[role="navigation"] {
 }
 nav[role="navigation"] a {
   display: inline-block;
-  margin: 1.0em 0.75em 2.0em;
+  margin: 1em 0.75em 2em;
 }
 
 .layout {
