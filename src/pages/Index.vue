@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <div class="twitter"></div>
+    <transition name="fade" appear>
+      <div class="twitter"></div>
+    </transition>
   </Layout>
 </template>
 
@@ -17,4 +19,14 @@ export default {
   }
 };
 </script>
+
+<style>
+.fade-enter-active {
+  transition: opacity 0.1s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+</style>
 

@@ -11,13 +11,15 @@
         <h1>THOMAS&nbsp;COBER</h1>
       </div>
       <slot />
-      <div class="menu">
-        <g-link to="/work" class="design button text">WORK</g-link>
+      <transition name="fade" appear>
+        <div v-if="showMenu" class="menu">
+          <g-link to="/work" class="design button text">WORK</g-link>
 
-        <div class="music button text">MUSIC</div>
+          <g-link to="/music" class="music button text">MUSIC</g-link>
 
-        <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
-      </div>
+          <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -26,7 +28,16 @@
 import BackgroundSvg from "@/components/BackgroundSvg.vue";
 export default {
   name: "Layout",
-  components: { BackgroundSvg }
+  components: { BackgroundSvg },
+  computed: {
+    showMenu() {
+      if (this.$route.path == "/music") {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
 };
 </script>
 
@@ -68,5 +79,13 @@ nav[role="navigation"] a {
 }
 .post-list li {
   padding: 1em 0;
+}
+
+.fade-enter-active {
+  transition: opacity 0.1s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>
