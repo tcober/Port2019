@@ -8,11 +8,11 @@ module.exports = {
         baseUrl: "https://boxboxboxbox.com", // required
         typeName: "WordPress", // GraphQL schema name (Optional)
         perPage: 100, // How many posts to load from server per request (Optional)
-        concurrent: 10, // How many requests to run simultaneously (Optional)
+        concurrent: 10,
         routes: {
-          post: "/work/:id", //adds route for "post" post type (Optional)
-          post_tag: "/tag/:slug" // adds route for "post_tag" post type (Optional)
-        }
+          post: "work/:id",
+          blog: "blog/:id"
+        } // How many requests to run simultaneously (Optional)
       }
     },
     {

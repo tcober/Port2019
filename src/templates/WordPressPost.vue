@@ -1,9 +1,12 @@
 <template>
-  <Layout></Layout>
+  <Layout>
+    <h1>{{$page.post.title}}</h1>
+  </Layout>
 </template>
 
 <script>
 export default {
+  name: "WorkPost",
   metaInfo() {
     return {
       title: "Yo"
@@ -17,28 +20,29 @@ query Post ($path: String!) {
   post: wordPressPost (path: $path) {
     title
     content
+    featuredMedia {
+      sourceUrl
+      altText
+      mediaDetails {
+        width
+      }
+    }
+    categories {
+      id
+      title
+      path
+    }
+    tags {
+      id
+      title
+      path
+    }
   }
 }
 </page-query>
 
 <style>
-ul.list {
-  list-style: none;
-  padding: 0;
-}
-ul.list li {
-  display: inline-block;
-  margin-right: 0.25em;
-}
-ul.list.tags li a {
-  padding: 0.25em 0.5em;
-  background-color: lightgray;
-}
-ul.list.categories li:after {
-  content: ",";
-  display: inline-block;
-}
-ul.list li:last-child:after {
-  content: "";
+h1 {
+  color: red;
 }
 </style>
