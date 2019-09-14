@@ -37,12 +37,11 @@ query {
 
 <style>
 .fade-enter-active {
-  transition: all 0.1s;
-  transform: translateY(0px);
+  transition: all 0.3s;
+  opacity: 1;
 }
 
 .fade-enter {
   opacity: 0;
-  transform: translateY(20px);
 }
 </style>
