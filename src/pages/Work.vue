@@ -35,7 +35,14 @@ query {
 }
 </page-query>
 
-<style>
+<style lang="scss" scoped>
+.loader {
+  color: #000;
+  &:hover {
+    color: $color3;
+  }
+}
+
 .fade-enter-active {
   transition: all 0.3s;
   opacity: 1;

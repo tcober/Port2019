@@ -8,7 +8,9 @@
         <a href="mailto:tcober5@gmail.com">
           <g-image src="@/assets/mail.svg" width="40" />
         </a>
-        <h1>THOMAS&nbsp;COBER</h1>
+        <h1>
+          <router-link to="/">THOMAS&nbsp;COBER</router-link>
+        </h1>
       </div>
       <slot />
       <transition name="fade" appear>
@@ -31,7 +33,8 @@ export default {
   components: { BackgroundSvg },
   computed: {
     showMenu() {
-      if (this.$route.path == "/music") {
+      console.log(this.$route);
+      if (this.$route.path == "/music" || this.$route.params.id) {
         return false;
       } else {
         return true;
@@ -41,44 +44,11 @@ export default {
 };
 </script>
 
-<style>
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-}
-
-img {
-  max-width: 100%;
-}
-
-nav[role="navigation"] {
-  text-align: center;
-}
-nav[role="navigation"] a {
-  display: inline-block;
-  margin: 1em 0.75em 2em;
-}
-
-.layout {
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.nav__link {
-  margin-left: 20px;
-}
-.post-list {
-  list-style: none;
-  padding-left: 0;
-}
-.post-list li {
-  padding: 1em 0;
+<style lang="scss" scoped>
+h1 {
+  a {
+    color: #fff;
+  }
 }
 
 .fade-enter-active {

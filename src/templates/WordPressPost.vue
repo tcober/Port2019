@@ -2,16 +2,16 @@
   <Layout>
     <div class="container">
       <div class="description">
-        <div class="closer">
+        <router-link :style="{opacity: opacity}" class="closer" to="/work">
           <span>X</span>
-        </div>
-        <div class="blurb">
+        </router-link>
+        <div class="blurb" :style="{opacity: opacity}">
           <h3>{{$page.post.title}}</h3>
           <p v-html="blurbText"></p>
         </div>
       </div>
       <template v-for="image in images">
-        <img class="port-image" :key="image.uid" :src="image.data.url" />
+        <img :style="{width: width}" class="port-image" :key="image.uid" :src="image.data.url" />
       </template>
     </div>
   </Layout>
@@ -23,6 +23,12 @@ export default {
   metaInfo() {
     return {
       title: "Yo"
+    };
+  },
+  data() {
+    return {
+      opacity: "1",
+      width: "80%"
     };
   },
   computed: {
@@ -43,6 +49,21 @@ export default {
         }
       });
       return images;
+    }
+  },
+  mounted: function() {
+    window.addEventListener("scroll", this.scrollSize);
+  },
+  destroyed: function() {
+    window.removeEventListener("scroll", this.scrollSize);
+  },
+  methods: {
+    scrollSize() {
+      let scrollVar = window.scrollY;
+      let scrollVarPerc = 80 + (100 - (100 - window.scrollY / 10)) + "%";
+      let opacityNum = (100 - scrollVar) / 100;
+      this.opacity = opacityNum;
+      this.width = scrollVarPerc;
     }
   }
 };
@@ -74,6 +95,7 @@ query Post ($path: String!) {
 
 <style lang="scss" scoped>
 .container {
+  margin-top: 50px;
   position: relative;
   width: 100%;
 }
@@ -105,7 +127,7 @@ query Post ($path: String!) {
     height: auto;
     border: 4px solid black;
     background-color: $color2;
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: $body;
   }
 
@@ -122,7 +144,9 @@ query Post ($path: String!) {
 }
 
 .port-image {
+  max-width: 100% !important;
   width: 80%;
   float: right;
+  margin-bottom: 50px;
 }
 </style>
