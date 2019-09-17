@@ -1,7 +1,12 @@
 <template>
   <Layout>
     <transition name="fade" appear>
-      <div class="twitter"></div>
+      <div class="twitter">
+        <div class="centerer">
+          <p class="created">{{dateFormat(tweet.created_at)}}</p>
+          <p>{{tweet.text}}</p>
+        </div>
+      </div>
     </transition>
   </Layout>
 </template>
@@ -13,20 +18,54 @@ export default {
     title: "The work of Thomas Cober"
   },
   computed: {
-    posts() {
-      return this.$page ? this.$page.allWordpressPost : null;
+    tweet() {
+      return this.$static.allTweet.edges[0].node.data[0];
+    }
+  },
+  methods: {
+    dateFormat(date) {
+      let newDate = new Date(date).toDateString();
+      return newDate;
     }
   }
 };
 </script>
 
-<style>
+<static-query>
+query {
+  allTweet {
+    edges {
+      node {
+        data {
+          text
+          created_at
+        }
+      }
+    }
+  }
+}
+</static-query>
+
+<style lang="scss" scoped>
 .fade-enter-active {
   transition: opacity 0.1s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+
+.centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  line-height: 21px;
+
+  .created {
+    text-decoration: underline;
+  }
 }
 </style>
 
