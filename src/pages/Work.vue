@@ -51,4 +51,33 @@ query {
 .fade-enter {
   opacity: 0;
 }
+
+.worklist {
+  height: auto;
+  width: 322px;
+  position: relative;
+  float: left;
+  margin-top: 130px;
+  padding: 10px;
+  border: 4px solid black;
+  background-color: $color2;
+
+  .loader {
+    cursor: pointer;
+  }
+
+  ul {
+    font-family: $body;
+
+    li {
+      margin: 20px 0;
+      font-size: $bodyFontSize;
+    }
+  }
+
+  @include respond-to("medium") {
+    float: none;
+    margin: 20px auto 0px;
+  }
+}
 </style>

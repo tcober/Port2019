@@ -50,11 +50,120 @@ h1 {
   }
 }
 
+.backgroundContain {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
+  svg {
+    z-index: 0;
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8%;
+  max-width: 1000px;
+  width: 80%;
+  height: auto;
+}
+
 .fade-enter-active {
   transition: opacity 0.1s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+
+.name {
+  z-index: 4;
+  width: 290px;
+  height: 50px;
+  background-color: $color1;
+  vertical-align: middle;
+  line-height: 48px;
+  padding: 0 30px 2px;
+
+  @include respond-to("medium") {
+    margin: 0 auto;
+  }
+
+  h1 {
+    width: 215px;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    font-family: $header;
+    color: $color2;
+  }
+
+  a {
+    height: 23px;
+
+    img {
+      margin: 0 15px 0 5px;
+      width: 40px;
+      height: auto;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  float: right;
+  margin-top: 5%;
+  z-index: 8;
+
+  .button {
+    display: block;
+    margin-top: 85px;
+    width: 250px;
+    height: 40px;
+    background-color: $color1;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    &.text {
+      color: $color2;
+      vertical-align: middle;
+      letter-spacing: 1.5px;
+      font-size: 25px;
+      font-family: $header;
+      line-height: 40px;
+    }
+
+    &.active {
+      width: 242px;
+      height: 32px;
+      border: 4px solid black;
+      background-color: $color2;
+      color: $color1;
+      line-height: 32px;
+    }
+  }
+
+  @include respond-to("medium") {
+    float: none;
+    width: 250px;
+    position: relative;
+    margin-bottom: 50px;
+    margin: 0px auto 50px;
+    z-index: 2;
+    & .button {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 </style>

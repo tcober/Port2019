@@ -63,8 +63,34 @@ query {
   width: 70%;
   line-height: 21px;
 
+  @include respond-to("medium") {
+    width: 75%;
+    line-height: 19px;
+  }
+
   .created {
     text-decoration: underline;
+  }
+}
+
+.twitter {
+  float: left;
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  background-color: $color1;
+  color: $color2;
+  font-size: $bodyFontSize;
+  font-family: $body;
+
+  @include respond-to("medium") {
+    float: none;
+    margin: 20px auto;
+    width: 225px;
+    height: 225px;
+    font-size: 12px;
   }
 }
 </style>

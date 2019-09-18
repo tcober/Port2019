@@ -21,13 +21,19 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .fade-enter-active {
   transition: opacity 0.8s;
 }
 
 .fade-enter {
   opacity: 0;
+}
+
+.player {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
 }
 </style>
 

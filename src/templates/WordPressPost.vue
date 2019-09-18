@@ -98,6 +98,10 @@ query Post ($path: String!) {
   margin-top: 50px;
   position: relative;
   width: 100%;
+
+  @include respond-to("medium") {
+    margin: 0px auto;
+  }
 }
 
 .closer {
@@ -120,7 +124,13 @@ query Post ($path: String!) {
   position: absolute;
   top: 0;
   left: 0;
-  width: 350px;
+  max-width: 350px;
+
+  a {
+    @include respond-to("medium") {
+      opacity: 1 !important;
+    }
+  }
 
   .blurb {
     padding: 15px;
@@ -129,6 +139,9 @@ query Post ($path: String!) {
     background-color: $color2;
     margin-top: 20px;
     font-family: $body;
+    @include respond-to("medium") {
+      opacity: 1 !important;
+    }
   }
 
   h3 {
@@ -140,6 +153,16 @@ query Post ($path: String!) {
   p {
     font-size: $bodyFontSize;
     line-height: 22px;
+
+    @include respond-to("medium") {
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+
+  @include respond-to("medium") {
+    position: relative;
+    margin: 20px auto 20px;
   }
 }
 
@@ -148,5 +171,11 @@ query Post ($path: String!) {
   width: 80%;
   float: right;
   margin-bottom: 50px;
+
+  @include respond-to("medium") {
+    float: none;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
 }
 </style>
