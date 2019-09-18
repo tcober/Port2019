@@ -77,7 +77,7 @@ query {
 
   @include respond-to("medium") {
     float: none;
-    margin: 20px auto 0px;
+    margin: 20px auto 20px;
   }
 }
 </style>

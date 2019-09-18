@@ -68,11 +68,14 @@ h1 {
 
 .container {
   position: relative;
-  margin: 0 auto;
-  margin-top: 8%;
+  margin: 8% auto 0px;
   max-width: 1000px;
   width: 80%;
   height: auto;
+
+  @include respond-to("medium") {
+    width: 95%;
+  }
 }
 
 .fade-enter-active {
@@ -92,10 +95,6 @@ h1 {
   line-height: 48px;
   padding: 0 30px 2px;
 
-  @include respond-to("medium") {
-    margin: 0 auto;
-  }
-
   h1 {
     width: 215px;
     display: inline-block;
@@ -113,6 +112,10 @@ h1 {
       width: 40px;
       height: auto;
     }
+  }
+
+  @include respond-to("medium") {
+    margin: 0 auto;
   }
 }
 
