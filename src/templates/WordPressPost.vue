@@ -11,7 +11,7 @@
         </div>
       </div>
       <template v-for="image in images">
-        <img :style="{width: width}" class="port-image" :key="image.uid" :src="image.data.url" />
+        <g-image :style="{width: width}" class="port-image" :key="image.uid" :src="image.data.url" />
       </template>
     </div>
   </Layout>
