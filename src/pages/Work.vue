@@ -23,7 +23,7 @@ export default {
 
 <page-query>
 query {
-  posts: allWordPressPost {
+  posts: allWordPressPost(order: ASC) {
     edges {
       node {
         id
