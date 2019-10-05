@@ -22,7 +22,10 @@ export default {
   name: "WorkPost",
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      meta: [
+        { key: "description", name: "description", content: this.blurbText }
+      ]
     };
   },
   data() {
