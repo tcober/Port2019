@@ -1,6 +1,7 @@
 module.exports = {
-  siteName: "Gridsome",
-  siteDescription: "A WordPress starter for Gridsome",
+  siteName: "Thomas Cober",
+  siteDescription:
+    "The design, programming, and musical work of Thomas Charles Cober",
   plugins: [
     {
       use: "@gridsome/source-wordpress",
