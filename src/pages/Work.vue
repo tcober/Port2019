@@ -1,14 +1,12 @@
 <template>
   <Layout>
-    <transition name="fade" appear>
-      <div class="worklist">
-        <ul>
-          <li v-for="name in $page.posts.edges" :key="name.node.id">
-            <g-link :to="`/work/${name.node.slug}`" class="loader">{{name.node.title}}</g-link>
-          </li>
-        </ul>
-      </div>
-    </transition>
+    <div class="worklist">
+      <ul>
+        <li v-for="name in $page.posts.edges" :key="name.node.id">
+          <g-link :to="`/work/${name.node.slug}`" class="loader">{{name.node.title}}</g-link>
+        </li>
+      </ul>
+    </div>
   </Layout>
 </template>
 
@@ -42,15 +40,6 @@ query {
   &:hover {
     color: $color3;
   }
-}
-
-.fade-enter-active {
-  transition: all 0.3s;
-  opacity: 1;
-}
-
-.fade-enter {
-  opacity: 0;
 }
 
 .worklist {

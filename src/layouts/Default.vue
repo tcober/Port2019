@@ -13,15 +13,13 @@
         </h1>
       </div>
       <slot />
-      <transition name="fade" appear>
-        <div v-if="showMenu" class="menu">
-          <g-link to="/work" class="design button text">WORK</g-link>
+      <div v-if="showMenu" class="menu">
+        <g-link to="/work" class="design button text">WORK</g-link>
 
-          <g-link to="/music" class="music button text">MUSIC</g-link>
+        <g-link to="/music" class="music button text">MUSIC</g-link>
 
-          <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
-        </div>
-      </transition>
+        <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
+      </div>
     </div>
   </div>
 </template>
@@ -76,14 +74,6 @@ h1 {
   @include respond-to("medium") {
     width: 95%;
   }
-}
-
-.fade-enter-active {
-  transition: opacity 0.1s;
-}
-
-.fade-enter {
-  opacity: 0;
 }
 
 .name {

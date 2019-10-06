@@ -10,9 +10,13 @@
           <p v-html="blurbText"></p>
         </div>
       </div>
-      <template v-for="image in images">
-        <g-image :style="{width: width}" class="port-image" :key="image.uid" :src="image.data.url" />
-      </template>
+      <transition name="fade" appear>
+        <div class="image-container">
+          <div v-for="image in images" :key="image.uid">
+            <g-image :style="{width: width}" class="port-image" :src="image.data.url" />
+          </div>
+        </div>
+      </transition>
     </div>
   </Layout>
 </template>
@@ -127,6 +131,7 @@ query Post ($path: String!) {
   top: 0;
   left: 0;
   max-width: 350px;
+  z-index: 999;
 
   a {
     @include respond-to("medium") {
@@ -179,5 +184,14 @@ query Post ($path: String!) {
     width: 100% !important;
     margin-bottom: 20px;
   }
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>

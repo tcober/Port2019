@@ -1,13 +1,11 @@
 <template>
   <Layout>
-    <transition name="fade" appear>
-      <div class="twitter">
-        <div class="centerer">
-          <p class="created">{{dateFormat(tweet.created_at)}}</p>
-          <p>{{tweet.text}}</p>
-        </div>
+    <div class="twitter">
+      <div class="centerer">
+        <p class="created">{{dateFormat(tweet.created_at)}}</p>
+        <p>{{tweet.text}}</p>
       </div>
-    </transition>
+    </div>
   </Layout>
 </template>
 
@@ -47,14 +45,6 @@ query {
 </static-query>
 
 <style lang="scss" scoped>
-.fade-enter-active {
-  transition: opacity 0.1s;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
 .centerer {
   position: absolute;
   top: 50%;
