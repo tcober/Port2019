@@ -180,8 +180,4 @@ query Post ($path: String!) {
     margin-bottom: 20px;
   }
 }
-
-a {
-  color: red;
-}
 </style>
