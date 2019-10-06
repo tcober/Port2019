@@ -13,7 +13,14 @@
 export default {
   name: "Index",
   metaInfo: {
-    title: "The work of Thomas Cober"
+    title: "The work of Thomas Cober",
+    meta: [
+      {
+        key: "google-site-verification",
+        name: "google-site-verification",
+        content: "9Agzu25KvRoSoVnG79Lq6hpJUAQMJrlkA5Xn80Fgop4"
+      }
+    ]
   },
   computed: {
     tweet() {
