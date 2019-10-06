@@ -173,6 +173,13 @@ a {
   }
 }
 
+.blurb a {
+  color: $color3;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Closer */
 .musicCloser,
 .closer {

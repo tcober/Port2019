@@ -91,7 +91,6 @@ query Post ($path: String!) {
         caption
       }
     }
-    
   }
 }
 </page-query>
@@ -180,5 +179,9 @@ query Post ($path: String!) {
     width: 100% !important;
     margin-bottom: 20px;
   }
+}
+
+a {
+  color: red;
 }
 </style>
