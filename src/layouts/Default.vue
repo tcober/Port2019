@@ -33,7 +33,7 @@ export default {
   components: { BackgroundSvg },
   computed: {
     showMenu() {
-      if (this.$route.path == "/music" || this.$route.params.id) {
+      if (this.$route.path == "/music" || this.$route.params.slug) {
         return false;
       } else {
         return true;
