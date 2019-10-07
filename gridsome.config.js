@@ -28,6 +28,12 @@ module.exports = {
       options: {
         cacheTime: 600000
       }
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-43614936-1"
+      }
     }
   ]
 };
