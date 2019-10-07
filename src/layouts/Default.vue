@@ -6,14 +6,14 @@
     <div class="container">
       <div class="name">
         <a aria-label="Send Tom an email" href="mailto:tcober5@gmail.com">
-          <g-image src="@/assets/mail.svg" width="40" />
+          <g-image alt="Send Tom mail icon" src="@/assets/mail.svg" width="40" />
         </a>
         <h1>
           <router-link to="/">THOMAS&nbsp;COBER</router-link>
         </h1>
       </div>
       <slot />
-      <div v-if="showMenu" class="menu">
+      <div aria-label="Navigation buttons" v-if="showMenu" class="menu">
         <g-link to="/work" class="design button text">WORK</g-link>
 
         <g-link to="/music" class="music button text">MUSIC</g-link>
