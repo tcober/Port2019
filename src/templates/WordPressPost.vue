@@ -2,16 +2,16 @@
   <Layout>
     <div class="container">
       <div class="description">
-        <router-link :style="{opacity: opacity}" class="closer" to="/work">
+        <router-link aria-label="Close" :style="{opacity: opacity}" class="closer" to="/work">
           <span>X</span>
         </router-link>
-        <div class="blurb" :style="{opacity: opacity}">
+        <div aria-label="blurb" class="blurb" :style="{opacity: opacity}">
           <h3>{{$page.post.title}}</h3>
           <p v-html="blurbText"></p>
         </div>
       </div>
       <transition name="fade" appear>
-        <div class="image-container">
+        <div aria-label="image section" class="image-container">
           <div v-for="image in images" :key="image.uid">
             <g-image
               :style="{width: width}"

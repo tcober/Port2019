@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="twitter">
-      <div class="centerer">
+      <div aria-label="latest Tweet" class="centerer">
         <p class="created">{{dateFormat(tweet.created_at)}}</p>
         <p>{{tweet.text}}</p>
       </div>
