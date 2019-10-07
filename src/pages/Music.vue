@@ -17,7 +17,17 @@
 
 <script>
 export default {
-  name: "Music"
+  name: "Music",
+  metaInfo: {
+    title: "Thomas Cober's Music",
+    meta: [
+      {
+        key: "description",
+        name: "description",
+        content: "Some song's that I wrote"
+      }
+    ]
+  }
 };
 </script>
 
