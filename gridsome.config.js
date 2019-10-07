@@ -1,5 +1,6 @@
 module.exports = {
   siteName: "Thomas Cober",
+  siteUrl: "https://thomascober.com",
   siteDescription:
     "The design, programming, and musical work of Thomas Charles Cober",
   plugins: [
@@ -20,6 +21,12 @@ module.exports = {
       use: "gridsome-plugin-sass-resources-loader",
       options: {
         resources: "@/assets/_globals.scss"
+      }
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000
       }
     }
   ]
