@@ -5,7 +5,7 @@
     </div>
     <div class="container">
       <div class="name">
-        <a href="mailto:tcober5@gmail.com">
+        <a aria-label="Send Tom an email" href="mailto:tcober5@gmail.com">
           <g-image src="@/assets/mail.svg" width="40" />
         </a>
         <h1>
