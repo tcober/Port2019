@@ -19,6 +19,11 @@ export default {
         key: "google-site-verification",
         name: "google-site-verification",
         content: "9Agzu25KvRoSoVnG79Lq6hpJUAQMJrlkA5Xn80Fgop4"
+      },
+      {
+        key: "description",
+        name: "description",
+        content: "Websites, code, and music that I have done over the years."
       }
     ]
   },
