@@ -14,7 +14,14 @@
 export default {
   name: "WorkNav",
   metaInfo: {
-    title: "Thomas Cober's Old Web Work"
+    title: "Thomas Cober's Old Web Work",
+    meta: [
+      {
+        key: "description",
+        name: "description",
+        content: "Some older work for posterity"
+      }
+    ]
   }
 };
 </script>
