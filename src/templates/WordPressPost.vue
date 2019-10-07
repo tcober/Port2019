@@ -13,7 +13,12 @@
       <transition name="fade" appear>
         <div class="image-container">
           <div v-for="image in images" :key="image.uid">
-            <g-image :style="{width: width}" class="port-image" :src="image.data.url" />
+            <g-image
+              :style="{width: width}"
+              class="port-image"
+              :alt="image.data.alt"
+              :src="image.data.url"
+            />
           </div>
         </div>
       </transition>
