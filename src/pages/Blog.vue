@@ -4,7 +4,7 @@
       <div class="worklist">
         <ul>
           <li v-for="name in $page.posts.edges" :key="name.node.id">
-            <g-link :to="`blog/${name.node.id}`" class="loader">{{name.node.title}}</g-link>
+            <g-link :to="`blog/${name.node.id}/`" class="loader">{{name.node.title}}</g-link>
           </li>
         </ul>
       </div>

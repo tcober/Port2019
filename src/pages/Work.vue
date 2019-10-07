@@ -3,7 +3,7 @@
     <div aria-label="List of work" class="worklist">
       <ul>
         <li v-for="name in $page.posts.edges" :key="name.node.id">
-          <g-link :to="`/work/${name.node.slug}`" class="loader">{{name.node.title}}</g-link>
+          <g-link :to="`/work/${name.node.slug}/`" class="loader">{{name.node.title}}</g-link>
         </li>
       </ul>
     </div>

@@ -14,9 +14,9 @@
       </div>
       <slot />
       <div aria-label="Navigation buttons" v-if="showMenu" class="menu">
-        <g-link to="/work" class="design button text">WORK</g-link>
+        <g-link to="/work/" class="design button text">WORK</g-link>
 
-        <g-link to="/music" class="music button text">MUSIC</g-link>
+        <g-link to="/music/" class="music button text">MUSIC</g-link>
 
         <a
           class="code button text"

@@ -2,9 +2,9 @@
   <Layout>
     <div class="container">
       <div class="description">
-        <router-link aria-label="Close" :style="{opacity: opacity}" class="closer" to="/work">
+        <g-link aria-label="Close" :style="{opacity: opacity}" class="closer" to="/work/">
           <span>X</span>
-        </router-link>
+        </g-link>
         <div aria-label="blurb" class="blurb" :style="{opacity: opacity}">
           <h3>{{$page.post.title}}</h3>
           <p v-html="blurbText"></p>
