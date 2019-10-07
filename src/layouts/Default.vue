@@ -18,7 +18,12 @@
 
         <g-link to="/music" class="music button text">MUSIC</g-link>
 
-        <a class="code button text" href="https://github.com/tcober" target="_blank">CODE</a>
+        <a
+          class="code button text"
+          rel="noopener"
+          href="https://github.com/tcober"
+          target="_blank"
+        >CODE</a>
       </div>
     </div>
   </div>
