@@ -122,6 +122,10 @@ table {
   border-collapse: collapse;
 }
 
+* {
+  font-display: auto;
+}
+
 /* Variables */
 $header: "ff-good-headline-web-pro-con", sans-serif;
 $body: "adelle", sans-serif;
