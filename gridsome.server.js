@@ -6,7 +6,7 @@ module.exports = function(api) {
       "https://boxboxboxbox.com/wp-json/wp/v2/twitter"
     );
 
-    const contentType = store.addContentType({
+    const contentType = store.addCollection({
       typeName: "Tweet"
     });
 

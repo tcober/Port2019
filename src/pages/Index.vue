@@ -2,8 +2,8 @@
   <Layout>
     <div class="twitter">
       <div aria-label="latest Tweet" class="centerer">
-        <p class="created">{{dateFormat(tweet.created_at)}}</p>
-        <p>{{tweet.text}}</p>
+        <p class="created">Temp</p>
+        <p>Test</p>
       </div>
     </div>
   </Layout>
@@ -40,21 +40,6 @@ export default {
   }
 };
 </script>
-
-<static-query>
-query {
-  allTweet {
-    edges {
-      node {
-        data {
-          text
-          created_at
-        }
-      }
-    }
-  }
-}
-</static-query>
 
 <style lang="scss" scoped>
 .centerer {
