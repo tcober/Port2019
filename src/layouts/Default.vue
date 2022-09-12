@@ -6,7 +6,11 @@
     <div class="container">
       <div class="name">
         <a aria-label="Send Tom an email" href="mailto:tcober5@gmail.com">
-          <g-image alt="Send Tom mail icon" src="@/assets/mail.svg" width="40" />
+          <g-image
+            alt="Send Tom mail icon"
+            src="@/assets/mail.svg"
+            width="40"
+          />
         </a>
         <h1>
           <router-link to="/">THOMAS&nbsp;COBER</router-link>
@@ -23,7 +27,8 @@
           rel="noopener"
           href="https://github.com/tcober"
           target="_blank"
-        >CODE</a>
+          >CODE</a
+        >
       </div>
     </div>
   </div>
@@ -36,13 +41,13 @@ export default {
   components: { BackgroundSvg },
   computed: {
     showMenu() {
-      if (this.$route.path == "/music" || this.$route.params.slug) {
+      if (this.$route.path === "/music/" || this.$route.params.slug) {
         return false;
       } else {
         return true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
