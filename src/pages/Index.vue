@@ -2,8 +2,10 @@
   <Layout>
     <div class="twitter">
       <div aria-label="latest Tweet" class="centerer">
-        <p class="created">Temp</p>
-        <p>Test</p>
+        <p>
+          Front End Developer in the streets. Aspiring Blender and Unity dev in
+          the sheets.
+        </p>
       </div>
     </div>
   </Layout>
@@ -18,26 +20,26 @@ export default {
       {
         key: "google-site-verification",
         name: "google-site-verification",
-        content: "9Agzu25KvRoSoVnG79Lq6hpJUAQMJrlkA5Xn80Fgop4"
+        content: "9Agzu25KvRoSoVnG79Lq6hpJUAQMJrlkA5Xn80Fgop4",
       },
       {
         key: "description",
         name: "description",
-        content: "Websites, code, and music that I have done over the years."
-      }
-    ]
+        content: "Websites, code, and music that I have done over the years.",
+      },
+    ],
   },
   computed: {
     tweet() {
       return this.$static.allTweet.edges[0].node.data[0];
-    }
+    },
   },
   methods: {
     dateFormat(date) {
       let newDate = new Date(date).toDateString();
       return newDate;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -81,4 +83,3 @@ export default {
   }
 }
 </style>
-
