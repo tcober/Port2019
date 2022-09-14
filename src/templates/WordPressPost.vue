@@ -19,6 +19,7 @@
         <div aria-label="image section" class="image-container">
           <div v-for="image in images" :key="image.uid">
             <g-image
+              v-if="imageVisible"
               :style="{ width: width }"
               class="port-image"
               :alt="image.data.alt"
@@ -44,6 +45,7 @@ export default {
   },
   data() {
     return {
+      imageVisible: false,
       opacity: "1",
       width: "80%",
     };
@@ -70,6 +72,8 @@ export default {
   },
   mounted: function() {
     window.addEventListener("scroll", this.scrollSize);
+    const img = new Image();
+    img.onload = this.imageVisible = true;
   },
   destroyed: function() {
     window.removeEventListener("scroll", this.scrollSize);
