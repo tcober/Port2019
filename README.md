@@ -1,6 +1,6 @@
 # Port2019
  New Gridsome/Wordpress Portfolio/Blog
 # Headline
-```javbascript
+```javascript
 const Kaiyla = cool;
 ```
